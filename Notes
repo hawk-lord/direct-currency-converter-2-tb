@@ -1,0 +1,39 @@
+cd /Applications/addon-sdk-1.17
+source bin/activate
+cd /Users/per/WebstormProjects/Add-OnSDK/direct-currency-converter-2-tb/
+cfx xpi
+
+// URL:
+chrome://messenger/content/messenger.xul
+//
+https://dxr.mozilla.org/comm-central/source/mail/base/content/messenger.xul
+  xulWindow [xpconnect wrapped nsISupports] id=undefined
+  domWindow [object ChromeWindow] id=undefined
+  xulDocument [object XULDocument] id=undefined
+// firstElementChild of xulDocument
+messengerWindow
+    navigation-toolbox
+    tabmail-container
+        tabmail
+            tabpanelcontainer
+                mailContent
+                    mail-toolbox
+                    messengerBox
+                        folderPanelBox
+                        folderpane_splitter
+                        (vbox)
+                            messagesBox
+                                quick-filter-bar
+                                displayDeck
+                                threadpane-splitter
+                                messagepaneboxwrapper
+                                    messagepanebox
+                                        singlemessage
+                                            messagepanewrapper
+                                                messagepane
+                                                    (document)
+                                                        (html)
+                                                            (head)
+                                                            (body)
+                                msg-footer-notification-box
+    status-bar
